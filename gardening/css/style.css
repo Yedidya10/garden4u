@@ -117,13 +117,13 @@
 .go-top i:last-child {
     opacity: 0;
     visibility: hidden;
-    top: 60%;
+    inset-block-start: 60%;
 }
 
-.go-top::before {
+.go-inset-block-start::before {
     content: '';
     position: absolute;
-    top: 0;
+    inset-block-start: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -150,14 +150,14 @@
 
 .go-top:hover i:first-child, .go-top:focus i:first-child {
     opacity: 0;
-    top: 0;
+    inset-block-start: 0;
     visibility: hidden;
 }
 
 .go-top:hover i:last-child, .go-top:focus i:last-child {
     opacity: 1;
     visibility: visible;
-    top: 50%;
+    inset-block-start: 50%;
 }
 
 /* ===================================
@@ -183,7 +183,7 @@
 
 }
 .hover-effect::after {
-    top: 0;
+    inset-block-start: 0;
     opacity: .7;
     left: 0;
 }
@@ -234,11 +234,11 @@ section,.section-padding {position: relative;overflow: hidden;}
 a {color:inherit;text-decoration: none;}
 .rev_slider_wrapper{width: 100% !important;}
 .btn.focus, .btn:focus{-webkit-box-shadow: none;box-shadow: none;}
-p:last-child{margin-bottom: 0 !important; font-family: 'Open Sans', sans-serif;}
+p:last-child{margin-block-end: 0 !important; font-family: 'Open Sans', sans-serif;}
 .fa, .far, .fas{display: inline;}
 a:active, a:hover{color: #81a109;}
 li{list-style: none;text-decoration: none;}
-blockquote {border-left: 2px solid;padding: 10px 15px 10px 35px;margin: 25px 0;font-size: 18px;line-height: 28px;margin-top: 32px;margin-bottom: 32px;}
+blockquote {border-left: 2px solid;padding: 10px 15px 10px 35px;margin: 25px 0;font-size: 18px;line-height: 28px;margin-block-start: 32px;margin-block-end: 32px;}
 blockquote > cite {font-weight: 400;font-size: 14px;display: block;}
 .hidden{display: none;}
 section{padding: 7.5rem 0;}
@@ -303,8 +303,8 @@ section{padding: 7.5rem 0;}
 .bg-gray {background: #f6f6f6;}
 .bg-transparent {background: transparent;}
 
-.margin-top {margin-top: 30px;}
-.margin-bottom {margin-bottom: 30px;}
+.margin-top {margin-block-start: 30px;}
+.margin-bottom {margin-block-end: 30px;}
 
 /*Social Icon Hover Bg Hover */
 .social-icon:hover{color:#FFFFFF !important; background: #33c9dd !important; -webkit-transition: .3s ease-in-out;-o-transition: .3s ease-in-out;transition: .3s ease-in-out;}
@@ -313,14 +313,14 @@ section{padding: 7.5rem 0;}
        Header
 ====================================== */
 .navbar {
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
     z-index: 9;
 }
 
 .center-brand {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
 }
 
 .center-brand, .transparent-bg {
@@ -366,8 +366,8 @@ section{padding: 7.5rem 0;}
     height: 80px;
     position: fixed;
     margin: 0;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
     z-index: 1002;
     -webkit-animation-name: animationFade;
     animation-name: animationFade;
@@ -497,19 +497,19 @@ section{padding: 7.5rem 0;}
 }
 
 .navbar-nav .nav-item:first-child {
-    margin-left: 0;
-    padding-left: 20px;
+    margin-inline-start: 0;
+    padding-inline-start: 20px;
 }
 
 .navbar-nav .nav-item:last-child {
-    margin-right: 0;
-    padding-right: 20px;
+    margin-inline-end: 0;
+    padding-inline-end: 20px;
 }
 
 .navbar-nav .nav-link {
     margin: 0 1rem !important;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    padding-inline-end: 0 !important;
+    padding-inline-start: 0 !important;
     padding: 0;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -527,8 +527,8 @@ section{padding: 7.5rem 0;}
 }
 
 .sidebar-nav .navbar-nav .nav-link {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
 }
 
 .square-layout .navbar-nav .nav-link {
@@ -605,8 +605,8 @@ section{padding: 7.5rem 0;}
     background: #fff;
     height: 2px;
     width: 25px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -785,7 +785,7 @@ section{padding: 7.5rem 0;}
     transition: all .3s linear;
     width: 36px;
     padding: 6px;
-    margin-right: 1rem;
+    margin-inline-end: 1rem;
     position: absolute;
     right: 15px;
 }
@@ -817,7 +817,7 @@ section{padding: 7.5rem 0;}
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    text-align: left;
+    text-align: right;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
@@ -827,7 +827,7 @@ section{padding: 7.5rem 0;}
 }
 
 .side-menu .side-nav {
-    margin-bottom: 30px;
+    margin-block-end: 30px;
     display: block;
 }
 
@@ -944,13 +944,13 @@ section{padding: 7.5rem 0;}
 
 .transparent-sidemenu .side-nav .navbar-nav .nav-link:hover,
 .transparent-sidemenu .side-nav .navbar-nav .nav-link:focus {
-    margin-left: 5px;
+    margin-inline-start: 5px;
 }
 
 .side-menu p{
     font-size: 15px;
-    margin-top: .5rem;
-    margin-bottom: 0;
+    margin-block-start: .5rem;
+    margin-block-end: 0;
     color: #FFFFFF;
 }
 
@@ -973,7 +973,7 @@ section{padding: 7.5rem 0;}
 
 /*wrapper on opened sidebar*/
 .wrapper {
-    padding-left: 290px;
+    padding-inline-start: 290px;
 }
 
 .wrapper .full-screen {
@@ -994,7 +994,7 @@ section{padding: 7.5rem 0;}
 }
 @media (min-width: 1025px) and (max-width: 1091px) {
     .navbar-nav.ml-auto {
-        margin-right: 30px;
+        margin-inline-end: 30px;
     }
     .sidemenu_btn {
         right: 0;
@@ -1098,8 +1098,8 @@ section{padding: 7.5rem 0;}
 
 .img-sec{
     position: relative;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    padding-inline-end: 50px;
+    padding-block-end: 50px;
 }
 
 .about_img {
@@ -1109,7 +1109,7 @@ section{padding: 7.5rem 0;}
 }
 
 .margin_aboutimg{
-    margin-left: 10%;
+    margin-inline-start: 10%;
 }
 
 .about_img img{
@@ -1129,13 +1129,13 @@ section{padding: 7.5rem 0;}
     font-family:'Open Sans', sans-serif;
     font-size: 18px;
     color: #33c9dd;
-    margin-bottom: 0;
+    margin-block-end: 0;
     letter-spacing: 0;
 }
 
 .about-heading{
-    text-align: left;
-    margin-top: 70px;
+    text-align: right;
+    margin-block-start: 70px;
 }
 
 .heading{
@@ -1147,8 +1147,8 @@ section{padding: 7.5rem 0;}
 }
 
 .margin_heading{
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-block-start: 25px;
+    margin-block-end: 25px;
 }
 
 .info{
@@ -1159,7 +1159,7 @@ section{padding: 7.5rem 0;}
 }
 
 .margin_button{
-    margin-top: 25px;
+    margin-block-start: 25px;
 }
 
 /* ===================================
@@ -1210,8 +1210,8 @@ section{padding: 7.5rem 0;}
 }
 
 .cover .card-title{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
     font-size: 30px;
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
@@ -1235,16 +1235,16 @@ section{padding: 7.5rem 0;}
 
 .portfolio-heading{
     text-align: center;
-    margin-top: 65px;
+    margin-block-start: 65px;
 }
 
 .portfolio-heading1{
-    text-align: left;
-    margin-top: 25px;
+    text-align: right;
+    margin-block-start: 25px;
 }
 
 .info_margin{
-    margin-bottom: 50px;
+    margin-block-end: 50px;
 }
 
 .main_heading{
@@ -1257,8 +1257,8 @@ section{padding: 7.5rem 0;}
 
 .heading_color{
     color: #81a109;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
 }
 
 .text_color {
@@ -1271,7 +1271,7 @@ section{padding: 7.5rem 0;}
     position: relative;
     overflow: hidden !important;
     background-color: #f6f6f6;
-    padding-top: 0;
+    padding-block-start: 0;
 }
 
 #portfolio_top::before,
@@ -1338,7 +1338,7 @@ section{padding: 7.5rem 0;}
     width: 70px;
     position: relative;
     overflow: hidden !important;
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
 }
 
 .plus_icon{
@@ -1346,8 +1346,8 @@ section{padding: 7.5rem 0;}
 }
 
 .hover_heading{
-    margin-top: 15px !important;
-    margin-bottom: 10px !important;
+    margin-block-start: 15px !important;
+    margin-block-end: 10px !important;
 }
 
 figure.snip0015 {
@@ -1494,7 +1494,7 @@ figure.snip0015:hover figcaption::before {
 }
 
 .caption_center{
-    margin-top: 150px;
+    margin-block-start: 150px;
 }
 
 /* ===================================
@@ -1502,21 +1502,21 @@ figure.snip0015:hover figcaption::before {
 =================================== */
 
 .counter-heading{
-    margin-left: auto;
+    margin-inline-start: auto;
     text-align: center;
-    margin-right: auto;
+    margin-inline-end: auto;
 }
 .info_width{
     max-width: 830px;
 }
 .wrapper{
-    margin-top: 50px;
+    margin-block-start: 50px;
     cursor: pointer;
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 .end {
-    margin-right: 0 !important;
+    margin-inline-end: 0 !important;
 }
 .counter {
     background-color: #ffffff;
@@ -1535,8 +1535,8 @@ figure.snip0015:hover figcaption::before {
     color: rgba(255, 255, 255, 0);
     font-weight: bold;
     line-height: 1.333;
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-block-start: 10px;
+    margin-block-end: 0;
     text-align: center;
     background: -webkit-linear-gradient( 170deg,#81a109 20%, #81a109 100%);
     -webkit-background-clip: text;
@@ -1553,8 +1553,8 @@ figure.snip0015:hover figcaption::before {
     color: rgba(255, 255, 255, 0);
     font-weight: bold;
     line-height: 1.333;
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-block-start: 10px;
+    margin-block-end: 0;
     text-align: center;
     background: -webkit-linear-gradient( 170deg,#33c9dd 20%, #33c9dd 100%);
     -webkit-background-clip: text;
@@ -1575,8 +1575,8 @@ figure.snip0015:hover figcaption::before {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     color: #212331;
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-block-start: 10px;
+    margin-block-end: 0;
     text-align: center;
 }
 .counter_icon {
@@ -1585,7 +1585,7 @@ figure.snip0015:hover figcaption::before {
     display: table;
     color: #212331;
     font-size: 50px;
-    padding-bottom: 10px;
+    padding-block-end: 10px;
 }
 .other{
     height: 1500px;
@@ -1601,13 +1601,13 @@ figure.snip0015:hover figcaption::before {
 }
 
 .vedio-heading{
-    text-align: left;
-    margin-top: 17.5%;
-    margin-bottom: 17.5%;
+    text-align: right;
+    margin-block-start: 17.5%;
+    margin-block-end: 17.5%;
 }
 
 .vedio_img{
-    margin-top: 40px;
+    margin-block-start: 40px;
 }
 
 .img-list {
@@ -1712,9 +1712,9 @@ figure.snip0015:hover figcaption::before {
 }
 .infot_margin{
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 40px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-block-end: 40px;
     position: relative;
     z-index: 999;
 }
@@ -1737,10 +1737,10 @@ figure.snip0015:hover figcaption::before {
     left: 32%;
 }
 #testimonials .item{
-    padding-bottom: 120px ;
+    padding-block-end: 120px ;
 }
 .owl-testimonial .owl-dots{
-    margin-top: 40px !important;
+    margin-block-start: 40px !important;
     text-align: center;
 }
 .owl-testimonial .owl-dots .owl-dot.active span, .owl-testimonial .owl-dots .owl-dot:hover span{
@@ -1755,8 +1755,8 @@ figure.snip0015:hover figcaption::before {
     border-radius: 50%;
 }
 .owl-testimonial .center .infot_margin{
-    padding-top: 10px;
-    padding-bottom: 60px;
+    padding-block-start: 10px;
+    padding-block-end: 60px;
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
     transition: 0.5s ease;
@@ -1790,16 +1790,16 @@ figure.snip0015:hover figcaption::before {
 =================================== */
 
 #contact{
-    padding-bottom: 0;
-    margin-bottom: 125px;
+    padding-block-end: 0;
+    margin-block-end: 125px;
     overflow: hidden !important;
 }
 .contact_text{
     text-align: center;
 }
 .contact_margin{
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
 }
 
 /* ===================================
@@ -1873,7 +1873,7 @@ figure.snip0015:hover figcaption::before {
 }
 
 .footer-social li:nth-last-child(1) a{
-    margin-right: 0;
+    margin-inline-end: 0;
 }
 
 .company-about{
@@ -1886,24 +1886,24 @@ figure.snip0015:hover figcaption::before {
 ====================================== */
 
 .standalone-row:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-block-end: 3rem;
 }
 .standalone-row .stand-img-des{
-    padding-left: 30px;
+    padding-inline-start: 30px;
     text-align: center;
 }
 .standalone-row:nth-child(2) .stand-img-des{
-    padding-left: 0;
-    padding-right: 30px;
+    padding-inline-start: 0;
+    padding-inline-end: 30px;
 }
 .standalone-detail .sub-heading{
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }
 .standalone-area .sub-heading{
-    margin-bottom: 8px;
+    margin-block-end: 8px;
 }
 .standalone-detail .heading{
-    margin-bottom: 20px;
+    margin-block-end: 20px;
     font-size: 56px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
@@ -1916,10 +1916,10 @@ figure.snip0015:hover figcaption::before {
 }
 
 .standalone-detail{
-    padding-bottom: 100px;
+    padding-block-end: 100px;
 }
 .standalone-area .heading-text{
-    margin-bottom: 12px;
+    margin-block-end: 12px;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 45px;
@@ -1943,7 +1943,7 @@ figure.snip0015:hover figcaption::before {
     color:#ffffff;
     font-weight:600;
     line-height:1.2em;
-    margin-bottom: 10px;
+    margin-block-end: 10px;
     font-size:3.5rem;
     text-transform:capitalize;
 }
@@ -1953,8 +1953,8 @@ figure.snip0015:hover figcaption::before {
 .page-breadcrumb li{
     position:relative;
     display:inline-block;
-    margin-right:10px;
-    padding-right:15px;
+    margin-inline-end:10px;
+    padding-inline-end:15px;
     color:#ffffff;
     font-size:14px;
     font-weight:400;
@@ -1974,8 +1974,8 @@ figure.snip0015:hover figcaption::before {
     display: none;
 }
 .page-breadcrumb li:last-child{
-    padding-right:0;
-    margin-right:0;
+    padding-inline-end:0;
+    margin-inline-end:0;
 }
 .page-breadcrumb li a{
     color:#fff;
@@ -1987,7 +1987,7 @@ figure.snip0015:hover figcaption::before {
     -o-transition:all 0.3s ease;
 }
 .page-breadcrumb li a .icon{
-    margin-right:4px;
+    margin-inline-end:4px;
     color:#33c9dd;
 }
 .page-breadcrumb li a:hover{
@@ -2010,8 +2010,8 @@ figure.snip0015:hover figcaption::before {
         bottom: 1%;
     }
     .about-heading{
-        margin-top: auto;
-        margin-bottom: auto;
+        margin-block-start: auto;
+        margin-block-end: auto;
     }
     .heading_font_sm{
         font-size: 40px;
@@ -2037,26 +2037,26 @@ figure.snip0015:hover figcaption::before {
         font-size: 12px;
         font-family: 'Open Sans', sans-serif;
         line-height: 1.7;
-        margin-bottom: 15px;
+        margin-block-end: 15px;
     }
     .margin_button {
-        margin-top: 0;
+        margin-block-start: 0;
     }
     .colored_heading {
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         color: #4ed0e2;
-        margin-bottom: 0;
+        margin-block-end: 0;
     }
     .heading {
         font-size: 40px;
         font-family: 'Raleway', sans-serif;
         color: #212331;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-block-start: 5px;
+        margin-block-end: 5px;
     }
     .about-heading{
-        margin-top: 0;
+        margin-block-start: 0;
     }
     .small-screen{
         display: block !important;
@@ -2069,20 +2069,20 @@ figure.snip0015:hover figcaption::before {
     }
     #portfolio_top {
         position: inherit !important;
-        margin-top: 0 !important;
+        margin-block-start: 0 !important;
     }
     .blog_text{
         text-align: center;
-        margin-bottom: 11.5%;
-        margin-top: 11.5%;
+        margin-block-end: 11.5%;
+        margin-block-start: 11.5%;
     }
     .md_heading {
         font-size: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-block-start: 10px;
+        margin-block-end: 10px;
     }
     .standalone-detail {
-        padding-bottom: 70px;
+        padding-block-end: 70px;
     }
     .standalone-area .gradient-text1{
         font-size: 30px;
@@ -2091,37 +2091,37 @@ figure.snip0015:hover figcaption::before {
         font-size: 30px;
     }
     .standalone-area .sub-heading {
-        margin-top: 3rem;
+        margin-block-start: 3rem;
     }
     .standalone-row .stand-img-des {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
     }
     .standalone-row:nth-child(2) .stand-img-des {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
     }
     .standalone-row:nth-child(2){
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        margin-block-start: 3rem;
+        margin-block-end: 3rem;
     }
     .para_text {
         font-size: 18px;
     }
     .author-avatar {
         float: none;
-        margin-bottom: 25px;
+        margin-block-end: 25px;
         overflow: visible;
     }
     .agency-author {
         padding: 30px;
-        text-align: left;
+        text-align: right;
     }
     .author-content {
         padding: 0;
     }
     .standalone {
-        padding-bottom: 0;
+        padding-block-end: 0;
     }
 }
 
@@ -2138,10 +2138,10 @@ figure.snip0015:hover figcaption::before {
         display: flex;
     }
     .wrapper {
-        padding-left: 0;
+        padding-inline-start: 0;
     }
     .sidemenu_btn {
-        margin-top: 4px;
+        margin-block-start: 4px;
         right: 0;
         position: absolute;
     }
@@ -2176,7 +2176,7 @@ figure.snip0015:hover figcaption::before {
         margin: 8px;
     }
     .owl-testimonial .owl-dots {
-        margin-top: 20px !important;
+        margin-block-start: 20px !important;
     }
     .owl-theme .owl-dots .owl-dot span {
         margin: 5px 4px;
@@ -2191,11 +2191,11 @@ figure.snip0015:hover figcaption::before {
     }
     .cover{
         text-align: center;
-        margin-top: 40px;
+        margin-block-start: 40px;
     }
     .about-heading{
         text-align: center;
-        margin-top: 30px;
+        margin-block-start: 30px;
     }
     .heading_mainc{
         font-size: 35px;
@@ -2209,12 +2209,12 @@ figure.snip0015:hover figcaption::before {
         font-size: 35px;
         font-family: 'Raleway', sans-serif;
         color: #212331;
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin-block-start: 10px;
+        margin-block-end: 15px;
     }
     .margin_heading {
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin-block-start: 10px;
+        margin-block-end: 15px;
     }
     .info{
         color:#9d9d9d;
@@ -2223,11 +2223,11 @@ figure.snip0015:hover figcaption::before {
         line-height: 1.7;
     }
     .margin_button {
-        margin-top: 10px;
+        margin-block-start: 10px;
     }
     .cover .card-title {
-        margin-top: 5px;
-        margin-bottom: 18px;
+        margin-block-start: 5px;
+        margin-block-end: 18px;
     }
     .text_wrap {
         padding: 50px 2rem 0 2rem;
@@ -2248,7 +2248,7 @@ figure.snip0015:hover figcaption::before {
         left: 42%;
     }
     .vedio_text {
-        margin-top: 36px;
+        margin-block-start: 36px;
         font-size: 30px;
     }
     #portfolio_top #portfolio-measonry{
@@ -2264,22 +2264,22 @@ figure.snip0015:hover figcaption::before {
     }
     #portfolio_top {
         position: inherit !important;
-        margin-top: 0 !important;
+        margin-block-start: 0 !important;
     }
     .portfolio-heading1{
         text-align: center;
-        margin-top: 0;
-        padding-bottom: 30px;
+        margin-block-start: 0;
+        padding-block-end: 30px;
     }
     #portfolio_top::after {
         bottom: auto !important;
         display: none;
     }
     .caption_center {
-        margin-top: 28px;
+        margin-block-start: 28px;
     }
     p:last-child {
-        margin-bottom: 20px;
+        margin-block-end: 20px;
     }
     .footer-social a {
         margin: 0;
@@ -2288,7 +2288,7 @@ figure.snip0015:hover figcaption::before {
         font-size: 12px;
     }
     .standalone-detail {
-        padding-bottom: 70px;
+        padding-block-end: 70px;
     }
     .standalone-area .gradient-text1{
         font-size: 30px;
@@ -2297,19 +2297,19 @@ figure.snip0015:hover figcaption::before {
         font-size: 30px;
     }
     .standalone-area .sub-heading {
-        margin-top: 3rem;
+        margin-block-start: 3rem;
     }
     .standalone-row .stand-img-des {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
     }
     .standalone-row:nth-child(2) .stand-img-des {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
     }
     .standalone-row:nth-child(2){
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        margin-block-start: 3rem;
+        margin-block-end: 3rem;
     }
     .page-title h2{
         font-size: 2.5rem;
@@ -2331,7 +2331,7 @@ figure.snip0015:hover figcaption::before {
     height: 100%;
     width: 100%;
     position: fixed;
-    margin-top: 0;
+    margin-block-start: 0;
     top: 0;
     z-index: 999999;
 }
@@ -2346,8 +2346,8 @@ figure.snip0015:hover figcaption::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: -25px;
-    margin-left: -25px;
+    margin-block-start: -25px;
+    margin-inline-start: -25px;
 }
 @-webkit-keyframes sk-scaleout {
     0% {
